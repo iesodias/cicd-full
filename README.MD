@@ -8,4 +8,4 @@
 
 ## Step-by-Step
 
-## Requiriments
+## Requirements
