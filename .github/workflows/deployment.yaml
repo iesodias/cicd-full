@@ -26,8 +26,8 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v3
         with:
-          context: ./flask-app/app
-          file: Dockerfile
+          context: .
+          file: flask-app/app/Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/clockbox:latest
 
