@@ -1,5 +1,5 @@
 # start by pulling the python image
-FROM python:3.8-alpine
+FROM iesodias/python310:latest
 
 # copy the requirements file into the image
 COPY ./flask-app/app/requirements.txt /app/requirements.txt
