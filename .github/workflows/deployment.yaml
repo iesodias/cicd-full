@@ -23,9 +23,6 @@ jobs:
         uses: docker/setup-buildx-action@v2
       -
         name: Build and push
-        uses: docker/build-push-action@v3
-        with:
-          context: ./flask-app/app
-          file: Dockerfile
-          push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/clockbox:latest
+        run: |
+          pwd
+          docker ps
