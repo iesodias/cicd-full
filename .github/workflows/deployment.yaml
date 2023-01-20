@@ -29,5 +29,5 @@ jobs:
           context: .
           file: flask-app/app/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/clockbox:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/bootcampapp:latest
 
