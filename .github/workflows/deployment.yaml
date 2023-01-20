@@ -29,6 +29,7 @@ jobs:
           docker ps
           ls
           cd flask-app/app
+          ls
           docker build . --file Dockerfile --tag ${{ secrets.DOCKERHUB_USERNAME }}/bootcampapp:latest
           docker tag ${{ secrets.DOCKERHUB_USERNAME }}/bootcampapp:latest ${{ secrets.DOCKERHUB_USERNAME }}/bootcampapp:$(date +%s)
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/bootcampapp
