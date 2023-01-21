@@ -8,7 +8,7 @@ COPY ./flask-app/app/requirements.txt /app/requirements.txt
 WORKDIR /app
 
 # copy every content from the local file to the image
-COPY . /app
+COPY flask-app/app/. /app
 
 # install the dependencies and packages in the requirements file
 RUN pip install -r requirements.txt
