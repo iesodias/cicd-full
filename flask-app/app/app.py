@@ -4,11 +4,11 @@ import socket, os
 
 app = Flask(__name__, template_folder='templates_folder')
 
-@app.route("/goku")
+@app.route("/bootcamp/app1/goku")
 def goku():
   return render_template('goku.html')
 
-@app.route("/ping/<host>", methods=['GET'])
+@app.route("/bootcamp/app1/ping/<host>", methods=['GET'])
 def ping_host(host):
     result = os.system(f'ping -c 3 {host}')
 
@@ -17,21 +17,21 @@ def ping_host(host):
     else:
         return jsonify({"status": "failure"})
 
-@app.route("/host")
+@app.route("/bootcamp/app1/host")
 def host():
   return render_template('host.html', id_container=socket.gethostname())
 
-@app.route("/success", methods=["GET"])
+@app.route("/bootcamp/app1/success", methods=["GET"])
 def success():
     response = make_response("<h1>Success</h1>", 200)
     return response
 
-@app.route("/denied", methods=["GET"])
+@app.route("/bootcamp/app1/denied", methods=["GET"])
 def denied():
     response = make_response("<h1>Denied</h1>", 500)
     return response
 
-@app.route("/notfound", methods=["GET"])
+@app.route("/bootcamp/app1/notfound", methods=["GET"])
 def notfound():
     response = make_response("<h1>NotFound</h1>", 404)
     return response
